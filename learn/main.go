@@ -2,7 +2,7 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
+	//"strings"
 )
 
 //коммент
@@ -48,8 +48,14 @@ func main(){
 
 	// elems := map[string]string{}
 
-	fmt.Println(os.Args[0])
-	fmt.Println(strings.Join(os.Args[1:]," "))
+	//fmt.Println(os.Args[0])
+	//fmt.Println(strings.Join(os.Args[1:]," "))
 
+	s,sep:="",""
+	for _,arg:=range os.Args[:]{
+		s+=sep+arg
+		sep=" "
+	}
+	fmt.Println(s)
 
 }
