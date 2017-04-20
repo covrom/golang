@@ -16,12 +16,10 @@ func main(){
 		}
 		for _,line:=range strings.Split(string(data),"\n"){
 			counts[line]++
-		}
-	}
-	
-	for line,n:=range counts{
-		if n>1{
-			fmt.Printf("%d\t%s\n",n,line)
+			if counts[line]>1{
+				fmt.Println(filename)
+				break
+			}
 		}
 	}
 }
