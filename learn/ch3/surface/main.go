@@ -31,7 +31,7 @@ func main() {
 	if len(os.Args) > 1 && os.Args[1] == "web" {
 		//!+http
 		handler := func(w http.ResponseWriter, r *http.Request) {
-			w.Header().Set("ContentType", "image/svg+xml")
+			w.Header().Set("Content-Type", "img/svg+xml")
 			surface(w)
 		}
 		http.HandleFunc("/", handler)
