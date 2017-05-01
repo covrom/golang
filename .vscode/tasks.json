@@ -1,14 +1,21 @@
 {
-    "version": "0.1.0",
-    "tasks": [
-        {
-            "taskName": "run",
-            "command": "go",
-			"args": [
-				"run",
-				"${file}"
-			],
-            "isShellCommand": true
-        }
-    ]
+"version": "0.1.0",
+"isShellCommand": true,
+"showOutput": "always",
+"command": "go",
+"echoCommand": true ,
+"options": {
+    "cwd": "${fileDirname}"
+},
+"tasks": [
+    {
+        "taskName": "build",
+        "args": [
+            "build",
+            "-x"
+        ],
+        "isBuildCommand": true,
+        "suppressTaskName": true
+    }
+]
 }
